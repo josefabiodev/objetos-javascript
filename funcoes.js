@@ -19,3 +19,4 @@ const cliente = {
 
 cliente.efetuaPagamento(250);
 cliente.efetuaPagamento(25);
+cliente.efetuaPagamento(30);
