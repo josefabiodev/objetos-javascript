@@ -17,14 +17,9 @@ cliente.enderecos = [
     }
 ];
 
-cliente.enderecos.push({
-    rua: "R. da Flores",
-    numero: 452,
-    apartamento: false,
-})
-
-const listaApenasApartamentos = cliente.enderecos.filter(
-    (endereco) => endereco.apartamento === true
-);
-
-console.log(listaApenasApartamentos);
+for (let chave in cliente) {
+    let tipo = typeof cliente[chave];
+    if (tipo !== "object" && tipo !== "function") {
+        console.log(`A chave ${chave} tem o velor ${cliente[chave]}`);
+    }
+}
